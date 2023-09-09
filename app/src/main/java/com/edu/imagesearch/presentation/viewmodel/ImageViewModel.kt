@@ -8,8 +8,12 @@ import com.edu.imagesearch.data.common.Resource
 import com.edu.imagesearch.domain.use_case.GetSearchImageUseCase
 import com.edu.imagesearch.presentation.state.ImageState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -19,8 +23,19 @@ class ImageViewModel @Inject constructor(private val getSearchImageUseCase: GetS
     private val _imageList = mutableStateOf(ImageState())
     val imageList: State<ImageState> get() = _imageList
 
+    private val _query = MutableStateFlow("")
+
     init {
-        getSearchImage("sunflower")
+        getSearchImage("flower")
+        viewModelScope.launch {
+            _query.debounce(1000).collectLatest {
+                getSearchImage(query= it)
+            }
+        }
+    }
+
+    fun updateQuery(query: String){
+        _query.value = query
     }
 
     private fun getSearchImage(query: String) {

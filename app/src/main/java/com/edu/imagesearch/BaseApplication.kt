@@ -1,4 +1,4 @@
-package com.edu.imagesearch.di.app
+package com.edu.imagesearch
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
