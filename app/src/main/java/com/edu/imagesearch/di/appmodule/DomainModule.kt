@@ -1,7 +1,6 @@
 package com.edu.imagesearch.di.appmodule
 
-import com.edu.imagesearchapp.domain.repository.ImageRepository
-import com.edu.imagesearchapp.domain.use_case.GetSearchImageUseCase
+import com.edu.imagesearch.domain.repository.ImageRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -3,10 +3,7 @@ package com.edu.imagesearch.di.appmodule
 import com.edu.imagesearch.data.repository_impl.ImageRepositoryImpl
 import com.edu.imagesearch.data.source.remote.network.ApiService
 import com.edu.imagesearch.data.source.remote.network.BASE_URL
-import com.edu.imagesearchapp.data.source.remote.network.ApiService
-import com.edu.imagesearchapp.data.source.remote.network.BASE_URL
-import com.edu.imagesearchapp.data.repository.ImageRepositoryImpl
-import com.edu.imagesearchapp.domain.repository.ImageRepository
+import com.edu.imagesearch.domain.repository.ImageRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
