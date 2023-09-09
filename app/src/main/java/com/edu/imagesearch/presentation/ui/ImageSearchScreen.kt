@@ -15,9 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
+import com.edu.imagesearch.presentation.viewmodel.ImageViewModel
 
 @Composable
-fun MainViewScree(viewModel: ImageViewModel = hiltViewModel()) {
+fun ImageSearchViewScreen(viewModel: ImageViewModel = hiltViewModel()) {
 
     val result = viewModel.imageList.value
 
