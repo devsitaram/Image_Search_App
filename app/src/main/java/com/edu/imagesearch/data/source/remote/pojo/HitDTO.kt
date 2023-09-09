@@ -1,4 +1,4 @@
-package com.edu.imagesearchapp.data.source.remote.pojo
+package com.edu.imagesearch.data.source.remote.pojo
 
 data class HitDTO(
     val webformatHeight: Int,

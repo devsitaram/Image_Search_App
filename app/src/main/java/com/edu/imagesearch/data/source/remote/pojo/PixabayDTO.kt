@@ -1,4 +1,6 @@
-package com.edu.imagesearchapp.data.source.remote.pojo
+package com.edu.imagesearch.data.source.remote.pojo
+
+import com.edu.imagesearch.data.source.remote.pojo.HitDTO
 
 data class PixabayDTO(
     val hits: List<HitDTO>,

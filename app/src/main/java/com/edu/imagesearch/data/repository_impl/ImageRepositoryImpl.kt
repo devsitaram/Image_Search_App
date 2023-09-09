@@ -1,5 +1,6 @@
 package com.edu.imagesearch.data.repository_impl
 
+import com.edu.imagesearch.data.source.remote.network.ApiService
 import com.edu.imagesearchapp.data.common.toDomainModel
 import com.edu.imagesearchapp.data.source.remote.network.ApiService
 import com.edu.imagesearchapp.domain.model.ImageModel

@@ -1,6 +1,6 @@
 package com.edu.imagesearch.data.source.remote.network
 
-import com.edu.imagesearchapp.data.source.remote.pojo.PixabayDTO
+import com.edu.imagesearch.data.source.remote.pojo.PixabayDTO
 import retrofit2.http.GET
 import retrofit2.http.Query
 
